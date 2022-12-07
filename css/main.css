@@ -10,10 +10,32 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
+:root {
+  --title: 'Montserrat Alternates', cursive;
+  --standard-text: 'Nunito', sans-serif;
+  --standard-text-color: rgba(2, 14, 143, 0.99);
+  --background-color: #a0a6ff;
+}
 
-var --title: font-family: 'Kenia', cursive;
-font-family: 'Nunito', sans-serif;
+body {
+  font-family: var(--standard-text);
+  color: var(--standard-text-color);
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+}
+
+::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: url(https://images.unsplash.com/photo-1664265694638-e858db3fd16b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80) no-repeat center;
+  background-size: cover;
+}
 
 html {
   color: #222;
@@ -184,9 +206,9 @@ textarea {
 }
 
 @media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
 }
 
@@ -245,6 +267,10 @@ textarea {
    */
   thead {
     display: table-header-group;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
   }
 
   tr,
