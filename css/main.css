@@ -11,6 +11,10 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
+var --title: font-family: 'Kenia', cursive;
+font-family: 'Nunito', sans-serif;
+
+
 html {
   color: #222;
   font-size: 1em;
